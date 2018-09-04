@@ -77,6 +77,8 @@
 		4FA91378213E760D00112811 /* POCRegistration */ = {
 			isa = PBXGroup;
 			children = (
+				4FAB7F2A213E9438000BCB74 /* Common */,
+				4FAB7F1D213E929D000BCB74 /* Classes */,
 				4FA91379213E760D00112811 /* AppDelegate.swift */,
 				4FA9137B213E760D00112811 /* ViewController.swift */,
 				4FA9137D213E760D00112811 /* Main.storyboard */,
@@ -94,6 +96,68 @@
 				4FA91390213E760D00112811 /* Info.plist */,
 			);
 			path = POCRegistrationTests;
+			sourceTree = "<group>";
+		};
+		4FAB7F1D213E929D000BCB74 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4FAB7F29213E9426000BCB74 /* Login */,
+				4FAB7F28213E9417000BCB74 /* Registration */,
+				4FAB7F23213E9301000BCB74 /* Passcode */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		4FAB7F23213E9301000BCB74 /* Passcode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Passcode;
+			sourceTree = "<group>";
+		};
+		4FAB7F28213E9417000BCB74 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		4FAB7F29213E9426000BCB74 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4FAB7F2A213E9438000BCB74 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4FAB7F2D213E9452000BCB74 /* Branding */,
+				4FAB7F2C213E944B000BCB74 /* Network */,
+				4FAB7F2B213E9442000BCB74 /* KeyChain */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4FAB7F2B213E9442000BCB74 /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KeyChain;
+			sourceTree = "<group>";
+		};
+		4FAB7F2C213E944B000BCB74 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4FAB7F2D213E9452000BCB74 /* Branding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Branding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
