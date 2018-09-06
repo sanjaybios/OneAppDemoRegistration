@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        // test
         let titleLabel = UILabel(frame: CGRect(x: titleXPosition, y: titleYPosition, width: titleWidth, height: titleHeight))
         titleLabel.text = "Sample Code"
         titleLabel.font = ThemeHelper.Font(key: "ViewController.testTitle.font")!
