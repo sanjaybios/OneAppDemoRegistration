@@ -16,6 +16,12 @@
 		4FAB7F30213FBC92000BCB74 /* Declaration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FAB7F2F213FBC92000BCB74 /* Declaration.storyboard */; };
 		4FAB7F32213FBCE9000BCB74 /* POCDeclarationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAB7F31213FBCE9000BCB74 /* POCDeclarationViewController.swift */; };
 		4FAB7F34213FDD92000BCB74 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAB7F33213FDD92000BCB74 /* Constants.swift */; };
+		4FE8195C21411249007B69B4 /* POC-theme.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FE8195721411248007B69B4 /* POC-theme.json */; };
+		4FE8195D21411249007B69B4 /* WLTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8195821411249007B69B4 /* WLTheme.swift */; };
+		4FE8195E21411249007B69B4 /* WLThemeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8195921411249007B69B4 /* WLThemeNode.swift */; };
+		4FE8195F21411249007B69B4 /* NSDictionary+WLDeepMerge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8195A21411249007B69B4 /* NSDictionary+WLDeepMerge.swift */; };
+		4FE8196021411249007B69B4 /* ThemeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8195B21411249007B69B4 /* ThemeHelper.swift */; };
+		4FE81963214148F0007B69B4 /* DeclarationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE81962214148F0007B69B4 /* DeclarationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,12 @@
 		4FAB7F2F213FBC92000BCB74 /* Declaration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Declaration.storyboard; sourceTree = "<group>"; };
 		4FAB7F31213FBCE9000BCB74 /* POCDeclarationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POCDeclarationViewController.swift; sourceTree = "<group>"; };
 		4FAB7F33213FDD92000BCB74 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4FE8195721411248007B69B4 /* POC-theme.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "POC-theme.json"; sourceTree = "<group>"; };
+		4FE8195821411249007B69B4 /* WLTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLTheme.swift; sourceTree = "<group>"; };
+		4FE8195921411249007B69B4 /* WLThemeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLThemeNode.swift; sourceTree = "<group>"; };
+		4FE8195A21411249007B69B4 /* NSDictionary+WLDeepMerge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDictionary+WLDeepMerge.swift"; sourceTree = "<group>"; };
+		4FE8195B21411249007B69B4 /* ThemeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeHelper.swift; sourceTree = "<group>"; };
+		4FE81962214148F0007B69B4 /* DeclarationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclarationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +110,7 @@
 		4FA9138D213E760D00112811 /* POCRegistrationTests */ = {
 			isa = PBXGroup;
 			children = (
+				4FE81961214147C8007B69B4 /* Declaration */,
 				4FA9138E213E760D00112811 /* POCRegistrationTests.swift */,
 				4FA91390213E760D00112811 /* Info.plist */,
 			);
@@ -163,6 +176,11 @@
 		4FAB7F2D213E9452000BCB74 /* Branding */ = {
 			isa = PBXGroup;
 			children = (
+				4FE8195721411248007B69B4 /* POC-theme.json */,
+				4FE8195A21411249007B69B4 /* NSDictionary+WLDeepMerge.swift */,
+				4FE8195B21411249007B69B4 /* ThemeHelper.swift */,
+				4FE8195821411249007B69B4 /* WLTheme.swift */,
+				4FE8195921411249007B69B4 /* WLThemeNode.swift */,
 			);
 			path = Branding;
 			sourceTree = "<group>";
@@ -173,6 +191,14 @@
 				4FAB7F2F213FBC92000BCB74 /* Declaration.storyboard */,
 				4FAB7F31213FBCE9000BCB74 /* POCDeclarationViewController.swift */,
 				4FAB7F33213FDD92000BCB74 /* Constants.swift */,
+			);
+			path = Declaration;
+			sourceTree = "<group>";
+		};
+		4FE81961214147C8007B69B4 /* Declaration */ = {
+			isa = PBXGroup;
+			children = (
+				4FE81962214148F0007B69B4 /* DeclarationTests.swift */,
 			);
 			path = Declaration;
 			sourceTree = "<group>";
@@ -261,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FA91384213E760D00112811 /* LaunchScreen.storyboard in Resources */,
+				4FE8195C21411249007B69B4 /* POC-theme.json in Resources */,
 				4FA91381213E760D00112811 /* Assets.xcassets in Resources */,
 				4FA9137F213E760D00112811 /* Main.storyboard in Resources */,
 				4FAB7F30213FBC92000BCB74 /* Declaration.storyboard in Resources */,
@@ -281,10 +308,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FE8195E21411249007B69B4 /* WLThemeNode.swift in Sources */,
+				4FE8195D21411249007B69B4 /* WLTheme.swift in Sources */,
 				4FA9137C213E760D00112811 /* ViewController.swift in Sources */,
+				4FE8196021411249007B69B4 /* ThemeHelper.swift in Sources */,
 				4FA9137A213E760D00112811 /* AppDelegate.swift in Sources */,
 				4FAB7F32213FBCE9000BCB74 /* POCDeclarationViewController.swift in Sources */,
 				4FAB7F34213FDD92000BCB74 /* Constants.swift in Sources */,
+				4FE8195F21411249007B69B4 /* NSDictionary+WLDeepMerge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FE81963214148F0007B69B4 /* DeclarationTests.swift in Sources */,
 				4FA9138F213E760D00112811 /* POCRegistrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

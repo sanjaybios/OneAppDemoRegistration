@@ -14,23 +14,68 @@ class POCDeclarationViewController: UIViewController
     //IBOutlets
     @IBOutlet weak var declarationButton: UIBarButtonItem!
     @IBOutlet weak var finishButton: UIBarButtonItem!
+    
     @IBOutlet weak var guidelineUnderstandButton: UIButton!
+    {
+        didSet
+        {
+            self.guidelineUnderstandButton.setImage(#imageLiteral(resourceName: "Square"), for: .normal)
+        }
+    }
     @IBOutlet weak var termUnderstandButton: UIButton!
+    {
+        didSet
+        {
+            self.termUnderstandButton.setImage(#imageLiteral(resourceName: "Square"), for: .normal)
+        }
+    }
+    
     @IBOutlet weak var contactPreferenceButton: UIButton!
+    {
+        didSet
+        {
+            self.contactPreferenceButton.setImage(#imageLiteral(resourceName: "Square"), for: .normal)
+        }
+    }
     
     @IBOutlet weak var headingLabel: UILabel!
-    @IBOutlet weak var understoodGuidelineLabel: UILabel!
-    @IBOutlet weak var acceptTermsLabel: UILabel!
-    @IBOutlet weak var moreDescriptionLabel: UILabel!
-    @IBOutlet weak var contactPreferenceLabel: UILabel!
+    {
+        didSet
+        {
+            self.headingLabel.text = Constants.titleInstruction
+        }
+    }
+    @IBOutlet weak var understoodGuidelineLabel: UILabel!{
+        didSet
+        {
+            self.understoodGuidelineLabel.text = Constants.guidelinesInstruction
+        }
+    }
+    
+    @IBOutlet weak var acceptTermsLabel: UILabel!{
+        didSet
+        {
+            self.acceptTermsLabel.text = Constants.termsAcceptance
+        }
+    }
+    
+    @IBOutlet weak var moreDescriptionLabel: UILabel!{
+        didSet
+        {
+            self.moreDescriptionLabel.text = Constants.lowerDescription
+        }
+    }
+    
+    @IBOutlet weak var contactPreferenceLabel: UILabel!{
+        didSet
+        {
+            self.contactPreferenceLabel.text = Constants.preferences
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.setAllLabelText()
-        self.guidelineUnderstandButton.setImage(#imageLiteral(resourceName: "Square"), for: .normal)
-        self.termUnderstandButton.setImage(#imageLiteral(resourceName: "Square"), for: .normal)
-        self.contactPreferenceButton.setImage(#imageLiteral(resourceName: "Square"), for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,15 +83,6 @@ class POCDeclarationViewController: UIViewController
         
     }
     
-    //MARK: Local Functions
-    func setAllLabelText()
-    {
-        self.headingLabel.text = Constants.titleInstruction
-        self.understoodGuidelineLabel.text = Constants.guidelinesInstruction
-        self.acceptTermsLabel.text = Constants.termsAcceptance
-        self.moreDescriptionLabel.text = Constants.lowerDescription
-        self.contactPreferenceLabel.text = Constants.preferences
-    }
   
     //MARK: IBActions
     @IBAction func declare(_ sender: Any) {
