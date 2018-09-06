@@ -23,7 +23,6 @@ class ViewController: UIViewController {
         titleLabel.font = ThemeHelper.Font(key: "ViewController.testTitle.font")!
         titleLabel.textColor = ThemeHelper.Color(key: "ViewController.testTitle.textColor")!
         self.view.addSubview(titleLabel)
-        
     }
 
     override func didReceiveMemoryWarning() {
