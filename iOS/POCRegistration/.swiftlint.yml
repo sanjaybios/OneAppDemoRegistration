@@ -1,0 +1,68 @@
+disabled_rules: # rule identifiers to exclude from running
+  - legacy_cggeometry_functions
+  - trailing_whitespace
+  - line_length
+  - type_name
+  - mark
+  - closure_parameter_position
+  - unused_closure_parameter
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+  
+type_body_length:
+  - 400 # warning
+  - 500 # error
+
+custom_rules:
+  method_name: # rule identifier
+    name: "Method Name" # rule name. optional.
+    regex: '(func[.\s]*[A-Z].*?$)' # matching pattern
+    message: "Method name should start with lower case letter." # violation message. optional.
+    severity: warning # violation severity. optional.
+
+  class_name:
+    name: "Class Name"
+    regex: '(class[ ]{0,}[a-z][\w]{0,}\:)'
+    message: "Class name should start with upper case letter."
+    match_kinds: # SyntaxKinds to match. optional.
+      - identifier
+    severity: warning
+
+  method_space:
+    name: "Method Space"
+    regex: '(\}([]{1})[ ]{0,}[.\S].*?$)" # made it not only for methods
+    message: "Method name should start with new line whitespace.'
+    severity: warning
+
+  iboutlet_strong:
+    name: "IBOutlet Strong"
+    regex: '(@IBOutlet\W+(var|let).*$)'
+    message: "Outlets should generally be weak, except for those from File’s Owner to top-level objects in a nib file (or, in iOS, a storyboard scene) which should be strong."
+    severity: warning
+
+#rule no.11
+  extension_class:
+    name: "Extension Class"
+    regex: '(^[ ]{0,}extension([\W|\w|\s]{0,})?class|^[ ]{0,}class([\W|\w|\s]{0,})?extension)'
+    match_kinds: # SyntaxKinds to match. optional.
+      - identifier
+    message: "Define extensions in separate file to avoid code redundancy."
+    severity: warning
+
+#rule no.22 ##need to check
+  implicitly_unwrapped_types:
+    name: "Implicitly Unwrapped Types"
+    regex: '(@IBOutlet[ ]{0,}weak[ ]{0,}var[ ]{0,}\w+:[ ]{0,}\w+\?$)'
+    message: "Use implicit unwrapped optional type for outlet."
+    severity: error
+
+#rule no.17
+  swift_native_types:
+    name: "Swift Native Types"
+    regex: '((var|let)[ ]{0,}[\w]{0,}[ ]{0,}\=[ ]{0,}(Array|Dictionary)\<[\w]{0,}[,]{0,}[ ]{0,}[\w]{0,}\>)'
+    match_kinds: # SyntaxKinds to match. optional.
+      - identifier
+    message: "Use Swift's native syntax types."
+    severity: warning
