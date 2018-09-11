@@ -14,6 +14,8 @@
 		4FA91384213E760D00112811 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FA91382213E760D00112811 /* LaunchScreen.storyboard */; };
 		4FA9138F213E760D00112811 /* POCRegistrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA9138E213E760D00112811 /* POCRegistrationTests.swift */; };
 		73840B2821415E3400F19092 /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73840B2721415E3400F19092 /* StyleKit.swift */; };
+		DDD7D52F2147D5E8000CCF76 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD7D52D2147D5E7000CCF76 /* LoginViewController.swift */; };
+		DDD7D5302147D5E8000CCF76 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDD7D52E2147D5E8000CCF76 /* LoginStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		4FA9138E213E760D00112811 /* POCRegistrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POCRegistrationTests.swift; sourceTree = "<group>"; };
 		4FA91390213E760D00112811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73840B2721415E3400F19092 /* StyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
+		DDD7D52D2147D5E7000CCF76 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DDD7D52E2147D5E8000CCF76 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +83,8 @@
 		4FA91378213E760D00112811 /* POCRegistration */ = {
 			isa = PBXGroup;
 			children = (
+				DDD7D5322147D618000CCF76 /* Clasess */,
 				73840B2621415E1500F19092 /* Common */,
-				4FAB7F1D213E929D000BCB74 /* Classes */,
 				4FA91379213E760D00112811 /* AppDelegate.swift */,
 				4FA9137B213E760D00112811 /* ViewController.swift */,
 				4FA9137D213E760D00112811 /* Main.storyboard */,
@@ -100,43 +104,29 @@
 			path = POCRegistrationTests;
 			sourceTree = "<group>";
 		};
-		4FAB7F1D213E929D000BCB74 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				4FAB7F29213E9426000BCB74 /* Login */,
-				4FAB7F28213E9417000BCB74 /* Registration */,
-				4FAB7F23213E9301000BCB74 /* Passcode */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		4FAB7F23213E9301000BCB74 /* Passcode */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Passcode;
-			sourceTree = "<group>";
-		};
-		4FAB7F28213E9417000BCB74 /* Registration */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Registration;
-			sourceTree = "<group>";
-		};
-		4FAB7F29213E9426000BCB74 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		73840B2621415E1500F19092 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				73840B2721415E3400F19092 /* StyleKit.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		DDD7D5322147D618000CCF76 /* Clasess */ = {
+			isa = PBXGroup;
+			children = (
+				DDD7D5332147D655000CCF76 /* Login */,
+			);
+			path = Clasess;
+			sourceTree = "<group>";
+		};
+		DDD7D5332147D655000CCF76 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DDD7D52E2147D5E8000CCF76 /* LoginStoryboard.storyboard */,
+				DDD7D52D2147D5E7000CCF76 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +216,7 @@
 				4FA91384213E760D00112811 /* LaunchScreen.storyboard in Resources */,
 				4FA91381213E760D00112811 /* Assets.xcassets in Resources */,
 				4FA9137F213E760D00112811 /* Main.storyboard in Resources */,
+				DDD7D5302147D5E8000CCF76 /* LoginStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDD7D52F2147D5E8000CCF76 /* LoginViewController.swift in Sources */,
 				73840B2821415E3400F19092 /* StyleKit.swift in Sources */,
 				4FA9137C213E760D00112811 /* ViewController.swift in Sources */,
 				4FA9137A213E760D00112811 /* AppDelegate.swift in Sources */,
