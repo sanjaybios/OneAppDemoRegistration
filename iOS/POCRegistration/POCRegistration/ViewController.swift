@@ -17,13 +17,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        // test
         let titleLabel = UILabel(frame: CGRect(x: titleXPosition, y: titleYPosition, width: titleWidth, height: titleHeight))
         titleLabel.text = "Sample Code"
-        titleLabel.font = ThemeHelper.Font(key: "ViewController.testTitle.font")!
-        titleLabel.textColor = ThemeHelper.Color(key: "ViewController.testTitle.textColor")!
         self.view.addSubview(titleLabel)
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +28,4 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-
