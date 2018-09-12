@@ -8,71 +8,63 @@
 
 import UIKit
 
-class POCDeclarationViewController: UIViewController
-{
+class POCDeclarationViewController: UIViewController {
+    
+    //Variables
+    var isCodingGuidelineUnderstood  = false
+    var isTermsAccepted = false
+    var shouldContact = false
     
     //IBOutlets
     @IBOutlet weak var declarationButton: UIBarButtonItem!
     @IBOutlet weak var finishButton: UIBarButtonItem!
     
-    @IBOutlet weak var guidelineUnderstandButton: UIButton!
-    {
-        didSet
-        {
+    @IBOutlet weak var guidelineUnderstandButton: UIButton! {
+    didSet {
             self.guidelineUnderstandButton.setImage(#imageLiteral(resourceName: "Square"), for: .normal)
         }
     }
-    @IBOutlet weak var termUnderstandButton: UIButton!
-    {
-        didSet
-        {
+    @IBOutlet weak var termUnderstandButton: UIButton! {
+        didSet {
             self.termUnderstandButton.setImage(#imageLiteral(resourceName: "Square"), for: .normal)
         }
     }
     
-    @IBOutlet weak var contactPreferenceButton: UIButton!
-    {
-        didSet
-        {
+    @IBOutlet weak var contactPreferenceButton: UIButton! {
+        didSet {
             self.contactPreferenceButton.setImage(#imageLiteral(resourceName: "Square"), for: .normal)
         }
     }
     
-    @IBOutlet weak var headingLabel: UILabel!
-    {
-        didSet
-        {
+    @IBOutlet weak var headingLabel: UILabel! {
+        didSet {
             self.headingLabel.text = Constants.titleInstruction
         }
     }
-    @IBOutlet weak var understoodGuidelineLabel: UILabel!{
-        didSet
-        {
+    
+    @IBOutlet weak var understoodGuidelineLabel: UILabel! {
+        didSet {
             self.understoodGuidelineLabel.text = Constants.guidelinesInstruction
         }
     }
     
-    @IBOutlet weak var acceptTermsLabel: UILabel!{
-        didSet
-        {
+    @IBOutlet weak var acceptTermsLabel: UILabel! {
+        didSet {
             self.acceptTermsLabel.text = Constants.termsAcceptance
         }
     }
     
-    @IBOutlet weak var moreDescriptionLabel: UILabel!{
-        didSet
-        {
+    @IBOutlet weak var moreDescriptionLabel: UILabel! {
+        didSet {
             self.moreDescriptionLabel.text = Constants.lowerDescription
         }
     }
     
-    @IBOutlet weak var contactPreferenceLabel: UILabel!{
-        didSet
-        {
+    @IBOutlet weak var contactPreferenceLabel: UILabel! {
+        didSet {
             self.contactPreferenceLabel.text = Constants.preferences
         }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,12 +84,32 @@ class POCDeclarationViewController: UIViewController
     }
     
     @IBAction func understandGuidelines(_ sender: UIButton) {
-        
+        if isCodingGuidelineUnderstood {
+            isCodingGuidelineUnderstood = false
+            self.guidelineUnderstandButton.setImage(#imageLiteral(resourceName: "Square"), for: .normal)
+        } else {
+            isCodingGuidelineUnderstood = true
+            self.guidelineUnderstandButton.setImage(#imageLiteral(resourceName: "CheckMark"), for: .normal)
+        }
     }
     
     @IBAction func acceptTerms(_ sender: Any) {
+        if isTermsAccepted {
+            isTermsAccepted = false
+            self.termUnderstandButton.setImage(#imageLiteral(resourceName: "Square"), for: .normal)
+        } else {
+            isTermsAccepted = true
+            self.termUnderstandButton.setImage(#imageLiteral(resourceName: "CheckMark"), for: .normal)
+        }
     }
     
     @IBAction func contactPreference(_ sender: Any) {
+        if shouldContact {
+            shouldContact = false
+            self.contactPreferenceButton.setImage(#imageLiteral(resourceName: "Square"), for: .normal)
+        } else {
+            shouldContact = true
+            self.contactPreferenceButton.setImage(#imageLiteral(resourceName: "CheckMark"), for: .normal)
+        }
     }
 }
