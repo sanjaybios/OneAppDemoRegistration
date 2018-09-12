@@ -83,7 +83,6 @@ class POCDeclarationViewController: UIViewController
         
     }
     
-  
     //MARK: IBActions
     @IBAction func declare(_ sender: Any) {
         
