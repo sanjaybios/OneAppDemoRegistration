@@ -99,7 +99,6 @@
 				4FA91379213E760D00112811 /* AppDelegate.swift */,
 				4FA9137B213E760D00112811 /* ViewController.swift */,
 				4FA9137D213E760D00112811 /* Main.storyboard */,
-				4FE704DD2147D30A0037DD82 /* TermsAndConditions.swift */,
 				4FA91380213E760D00112811 /* Assets.xcassets */,
 				4FA91382213E760D00112811 /* LaunchScreen.storyboard */,
 				4FA91385213E760D00112811 /* Info.plist */,
@@ -117,6 +116,14 @@
 			path = POCRegistrationTests;
 			sourceTree = "<group>";
 		};
+		4FCBF3E2214F9F9E0005711C /* TermsAndCondition */ = {
+			isa = PBXGroup;
+			children = (
+				4FE704DD2147D30A0037DD82 /* TermsAndConditions.swift */,
+			);
+			path = TermsAndCondition;
+			sourceTree = "<group>";
+		};
 		4FE704DF2148F79F0037DD82 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +134,7 @@
 		4FE704EA2148F88D0037DD82 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4FCBF3E2214F9F9E0005711C /* TermsAndCondition */,
 				4FE704EB2148F88D0037DD82 /* Declaration */,
 				4FE704EF2148F88D0037DD82 /* Login */,
 				4FE704F22148F88D0037DD82 /* Passcode */,

@@ -11,14 +11,14 @@ import UIKit
 class LoginViewController: UIViewController {
     
     //MARK: IBOutlets
-    @IBOutlet weak var logoView: UIView!{
-        didSet{
+    @IBOutlet weak var logoView: UIView! {
+        didSet {
             getRoundedCornerView()
         }
     }
     @IBOutlet weak var logoImage: UIImageView!
-    @IBOutlet weak var passcodeTextField: UITextField!{
-        didSet{
+    @IBOutlet weak var passcodeTextField: UITextField! {
+        didSet {
             passcodeTextField.useUnderline()
         }
     }
@@ -40,19 +40,27 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func getRoundedCornerView() {
-        logoView.layer.cornerRadius = logoView.bounds.size.width/2;
-        logoView.layer.masksToBounds = true;
+        logoView.layer.cornerRadius = logoView.bounds.size.width/2
+        logoView.layer.masksToBounds = true
     }
 }
-extension LoginViewController:UITextFieldDelegate {
+extension LoginViewController: UITextFieldDelegate {
     
-    public func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }

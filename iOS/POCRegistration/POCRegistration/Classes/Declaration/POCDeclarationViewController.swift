@@ -81,6 +81,9 @@ class POCDeclarationViewController: UIViewController {
     }
     
     @IBAction func finish(_ sender: Any) {
+        let loginStoryboard = UIStoryboard.init(name: "LoginStoryboard", bundle: nil)
+        let loginViewController = loginStoryboard.instantiateViewController(withIdentifier: "LoginVC")
+        self.navigationController?.pushViewController(loginViewController, animated: true)
     }
     
     @IBAction func understandGuidelines(_ sender: UIButton) {
