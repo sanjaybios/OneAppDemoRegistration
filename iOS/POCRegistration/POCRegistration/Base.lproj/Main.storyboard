@@ -106,6 +106,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="kfJ-At-Yq4"/>
                     <connections>
+                        <outlet property="OkButton" destination="Vzn-2g-vhf" id="fGw-ez-wc6"/>
+                        <outlet property="okButton" destination="Vzn-2g-vhf" id="QC3-3p-OW8"/>
                         <outlet property="webView" destination="J0K-ln-rsb" id="x8d-hA-x3p"/>
                     </connections>
                 </viewController>
