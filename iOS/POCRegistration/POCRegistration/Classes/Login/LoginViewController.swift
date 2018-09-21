@@ -24,7 +24,6 @@ class LoginViewController: UIViewController {
     }
     
     //MARK: IBActions
-   
     @IBAction func signIn(_ sender: UIButton) {
     }
     
@@ -41,8 +40,9 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    //MARK: ViewController LifeCycle Methods
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -54,7 +54,8 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func getRoundedCornerView() {
+    //MARK: Private Functions
+    private func getRoundedCornerView() {
         logoView.layer.cornerRadius = logoView.bounds.size.width/2
         logoView.layer.masksToBounds = true
     }
