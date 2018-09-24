@@ -44,12 +44,15 @@
                                     <action selector="cancle:" destination="nT2-Gl-VE8" eventType="touchUpInside" id="oPQ-CV-s0A"/>
                                 </connections>
                             </button>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J0K-ln-rsb">
-                                <rect key="frame" x="0.0" y="64" width="375" height="552"/>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TSF-e6-BcA">
+                                <rect key="frame" x="0.0" y="76" width="375" height="540"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.48655467099999999" green="0.83820433940000005" blue="0.24110448700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="uaF-tF-xTZ"/>
@@ -73,7 +76,7 @@
                         <outlet property="OkButton" destination="Vzn-2g-vhf" id="fGw-ez-wc6"/>
                         <outlet property="cancleOutlet" destination="fp3-3Z-NRA" id="cUL-kd-v0A"/>
                         <outlet property="okButton" destination="Vzn-2g-vhf" id="CVP-ry-tx9"/>
-                        <outlet property="webView" destination="J0K-ln-rsb" id="x8d-hA-x3p"/>
+                        <outlet property="webView" destination="TSF-e6-BcA" id="hsb-if-Ptd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZNO-Mn-lZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
