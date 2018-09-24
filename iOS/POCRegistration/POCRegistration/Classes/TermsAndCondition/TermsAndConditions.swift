@@ -13,6 +13,7 @@ struct TermsAndConditionsConst {
      static let title = "Important"
      static let message = "Please read all the terms and conditions before you agree"
      static let mainStoryboard = "Main"
+     static let createPasscodeVC = "CreatePasscodeViewController"
      static let okTitle = "OK"
      static let cancle = "Cancle"
 }
@@ -65,10 +66,9 @@ class TermsAndConditions: UIViewController, UIScrollViewDelegate {
     
     //MARK: Private Functions
     private func gotoNextScreen() {
-        let storyboard = UIStoryboard(name: TermsAndConditionsConst.mainStoryboard, bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: TermsAndConditionsConst.storyboardId)
-        self.navigationController!.pushViewController(vc, animated: true)
-        
+        let mainStoryboard = UIStoryboard.init(name: TermsAndConditionsConst.mainStoryboard, bundle: nil)
+        let createPasscodeVC = mainStoryboard.instantiateViewController(withIdentifier: TermsAndConditionsConst.createPasscodeVC)
+        self.navigationController?.pushViewController(createPasscodeVC, animated: true)
     }
     //MARK: ViewController LifeCycle Methods
     override func viewDidLoad() {

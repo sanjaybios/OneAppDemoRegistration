@@ -21,6 +21,8 @@
 		4FE704F82148F88D0037DD82 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE704F12148F88D0037DD82 /* LoginViewController.swift */; };
 		4FE81963214148F0007B69B4 /* DeclarationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE81962214148F0007B69B4 /* DeclarationTests.swift */; };
 		73840B2821415E3400F19092 /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73840B2721415E3400F19092 /* StyleKit.swift */; };
+		DD12C76721571B22005AA6F6 /* UploadDocumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD12C76621571B22005AA6F6 /* UploadDocumentsViewController.swift */; };
+		DDD7D5272147CA93000CCF76 /* CreatePasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD7D5262147CA93000CCF76 /* CreatePasscodeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		4FE704F12148F88D0037DD82 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4FE81962214148F0007B69B4 /* DeclarationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclarationTests.swift; sourceTree = "<group>"; };
 		73840B2721415E3400F19092 /* StyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
+		DD12C76621571B22005AA6F6 /* UploadDocumentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDocumentsViewController.swift; sourceTree = "<group>"; };
+		DDD7D5262147CA93000CCF76 /* CreatePasscodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasscodeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,8 @@
 		4FE704F32148F88D0037DD82 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				DDD7D5262147CA93000CCF76 /* CreatePasscodeViewController.swift */,
+				DD12C76621571B22005AA6F6 /* UploadDocumentsViewController.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -316,11 +322,13 @@
 			files = (
 				73840B2821415E3400F19092 /* StyleKit.swift in Sources */,
 				4FA9137C213E760D00112811 /* ViewController.swift in Sources */,
+				DDD7D5272147CA93000CCF76 /* CreatePasscodeViewController.swift in Sources */,
 				4FA9137A213E760D00112811 /* AppDelegate.swift in Sources */,
 				4FE704F62148F88D0037DD82 /* POCDeclarationViewController.swift in Sources */,
 				4FE704DE2147D30A0037DD82 /* TermsAndConditions.swift in Sources */,
 				4FE704F82148F88D0037DD82 /* LoginViewController.swift in Sources */,
 				4FE704F42148F88D0037DD82 /* Constants.swift in Sources */,
+				DD12C76721571B22005AA6F6 /* UploadDocumentsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
