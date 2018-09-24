@@ -8,12 +8,21 @@
 
 import UIKit
 
-class POCDeclarationViewController: UIViewController {
+struct DeclarationViewConstants {
+    static let titleInstruction = "Please read the declaration below and check you're happy with it."
+    static let guidelinesInstruction = "I understand how the FSCS guideline protect my account."
+    static let termsAcceptance = "I have read the accepted the app terms and conditions and the Declaration."
+    static let lowerDescription = "App would like to keep you up-to-date by post, fax, telephone, email or other electronic means with money help, news and customer offers from us. We promise not to bombard you. Tick below if you'd rather we didn't do this."
+    static let preferences = "I'd prefer not to be contacted thanks."
     
-    //Variables
-    var isCodingGuidelineUnderstood  = false
-    var isTermsAccepted = false
-    var shouldContact = false
+    static let loginStoryboardName = "LoginStoryboard"
+    static let loginViewConrollerIdentifier = "LoginViewController"
+
+    static let untickImageName = "Square"
+    static let tickImageName = "CheckMark"
+}
+
+class POCDeclarationViewController: UIViewController {
     
     //IBOutlets
     @IBOutlet weak var declarationButton: UIBarButtonItem!
@@ -21,48 +30,51 @@ class POCDeclarationViewController: UIViewController {
     
     @IBOutlet weak var guidelineUnderstandButton: UIButton! {
     didSet {
-            self.guidelineUnderstandButton.setImage(#imageLiteral(resourceName: "Square"), for: .normal)
+            self.guidelineUnderstandButton.setImage(UIImage(named: DeclarationViewConstants.untickImageName), for: .normal)
+        self.guidelineUnderstandButton.setImage(UIImage(named: DeclarationViewConstants.tickImageName), for: .selected)
         }
     }
     @IBOutlet weak var termUnderstandButton: UIButton! {
         didSet {
-            self.termUnderstandButton.setImage(#imageLiteral(resourceName: "Square"), for: .normal)
+            self.termUnderstandButton.setImage(UIImage(named: DeclarationViewConstants.untickImageName), for: .normal)
+            self.termUnderstandButton.setImage(UIImage(named: DeclarationViewConstants.tickImageName), for: .selected)
         }
     }
     
     @IBOutlet weak var contactPreferenceButton: UIButton! {
         didSet {
-            self.contactPreferenceButton.setImage(#imageLiteral(resourceName: "Square"), for: .normal)
+            self.contactPreferenceButton.setImage(UIImage(named: DeclarationViewConstants.untickImageName), for: .normal)
+            self.contactPreferenceButton.setImage(UIImage(named: DeclarationViewConstants.tickImageName), for: .selected)
         }
     }
     
     @IBOutlet weak var headingLabel: UILabel! {
         didSet {
-            self.headingLabel.text = Constants.titleInstruction
+            self.headingLabel.text = DeclarationViewConstants.titleInstruction
         }
     }
     
     @IBOutlet weak var understoodGuidelineLabel: UILabel! {
         didSet {
-            self.understoodGuidelineLabel.text = Constants.guidelinesInstruction
+            self.understoodGuidelineLabel.text = DeclarationViewConstants.guidelinesInstruction
         }
     }
     
     @IBOutlet weak var acceptTermsLabel: UILabel! {
         didSet {
-            self.acceptTermsLabel.text = Constants.termsAcceptance
+            self.acceptTermsLabel.text = DeclarationViewConstants.termsAcceptance
         }
     }
     
     @IBOutlet weak var moreDescriptionLabel: UILabel! {
         didSet {
-            self.moreDescriptionLabel.text = Constants.lowerDescription
+            self.moreDescriptionLabel.text = DeclarationViewConstants.lowerDescription
         }
     }
     
     @IBOutlet weak var contactPreferenceLabel: UILabel! {
         didSet {
-            self.contactPreferenceLabel.text = Constants.preferences
+            self.contactPreferenceLabel.text = DeclarationViewConstants.preferences
         }
     }
     
@@ -81,38 +93,32 @@ class POCDeclarationViewController: UIViewController {
     }
     
     @IBAction func finish(_ sender: Any) {
-        let loginStoryboard = UIStoryboard.init(name: "LoginStoryboard", bundle: nil)
-        let loginViewController = loginStoryboard.instantiateViewController(withIdentifier: "LoginVC")
+        let loginStoryboard = UIStoryboard.init(name: DeclarationViewConstants.loginStoryboardName, bundle: nil)
+        let loginViewController = loginStoryboard.instantiateViewController(withIdentifier: DeclarationViewConstants.loginViewConrollerIdentifier)
         self.navigationController?.pushViewController(loginViewController, animated: true)
     }
     
     @IBAction func understandGuidelines(_ sender: UIButton) {
-        if isCodingGuidelineUnderstood {
-            isCodingGuidelineUnderstood = false
-            self.guidelineUnderstandButton.setImage(#imageLiteral(resourceName: "Square"), for: .normal)
+        if self.guidelineUnderstandButton.isSelected {
+            self.guidelineUnderstandButton.isSelected = false
         } else {
-            isCodingGuidelineUnderstood = true
-            self.guidelineUnderstandButton.setImage(#imageLiteral(resourceName: "CheckMark"), for: .normal)
+            self.guidelineUnderstandButton.isSelected = true
         }
     }
     
     @IBAction func acceptTerms(_ sender: Any) {
-        if isTermsAccepted {
-            isTermsAccepted = false
-            self.termUnderstandButton.setImage(#imageLiteral(resourceName: "Square"), for: .normal)
+        if self.termUnderstandButton.isSelected {
+            self.termUnderstandButton.isSelected = false
         } else {
-            isTermsAccepted = true
-            self.termUnderstandButton.setImage(#imageLiteral(resourceName: "CheckMark"), for: .normal)
+            self.termUnderstandButton.isSelected = true
         }
     }
     
     @IBAction func contactPreference(_ sender: Any) {
-        if shouldContact {
-            shouldContact = false
-            self.contactPreferenceButton.setImage(#imageLiteral(resourceName: "Square"), for: .normal)
+        if self.contactPreferenceButton.isSelected {
+            self.contactPreferenceButton.isSelected = false
         } else {
-            shouldContact = true
-            self.contactPreferenceButton.setImage(#imageLiteral(resourceName: "CheckMark"), for: .normal)
+            self.contactPreferenceButton.isSelected = true
         }
     }
 }

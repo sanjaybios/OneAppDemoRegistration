@@ -14,7 +14,6 @@
 		4FA91384213E760D00112811 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FA91382213E760D00112811 /* LaunchScreen.storyboard */; };
 		4FA9138F213E760D00112811 /* POCRegistrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA9138E213E760D00112811 /* POCRegistrationTests.swift */; };
 		4FE704DE2147D30A0037DD82 /* TermsAndConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE704DD2147D30A0037DD82 /* TermsAndConditions.swift */; };
-		4FE704F42148F88D0037DD82 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE704EC2148F88D0037DD82 /* Constants.swift */; };
 		4FE704F52148F88D0037DD82 /* Declaration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE704ED2148F88D0037DD82 /* Declaration.storyboard */; };
 		4FE704F62148F88D0037DD82 /* POCDeclarationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE704EE2148F88D0037DD82 /* POCDeclarationViewController.swift */; };
 		4FE704F72148F88D0037DD82 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE704F02148F88D0037DD82 /* LoginStoryboard.storyboard */; };
@@ -47,7 +46,6 @@
 		4FA9138E213E760D00112811 /* POCRegistrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POCRegistrationTests.swift; sourceTree = "<group>"; };
 		4FA91390213E760D00112811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FE704DD2147D30A0037DD82 /* TermsAndConditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsAndConditions.swift; sourceTree = "<group>"; };
-		4FE704EC2148F88D0037DD82 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4FE704ED2148F88D0037DD82 /* Declaration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Declaration.storyboard; sourceTree = "<group>"; };
 		4FE704EE2148F88D0037DD82 /* POCDeclarationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POCDeclarationViewController.swift; sourceTree = "<group>"; };
 		4FE704F02148F88D0037DD82 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 		4FE704EB2148F88D0037DD82 /* Declaration */ = {
 			isa = PBXGroup;
 			children = (
-				4FE704EC2148F88D0037DD82 /* Constants.swift */,
 				4FE704ED2148F88D0037DD82 /* Declaration.storyboard */,
 				4FE704EE2148F88D0037DD82 /* POCDeclarationViewController.swift */,
 			);
@@ -327,7 +324,6 @@
 				4FE704F62148F88D0037DD82 /* POCDeclarationViewController.swift in Sources */,
 				4FE704DE2147D30A0037DD82 /* TermsAndConditions.swift in Sources */,
 				4FE704F82148F88D0037DD82 /* LoginViewController.swift in Sources */,
-				4FE704F42148F88D0037DD82 /* Constants.swift in Sources */,
 				DD12C76721571B22005AA6F6 /* UploadDocumentsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
